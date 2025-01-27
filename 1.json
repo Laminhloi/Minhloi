@@ -1,0 +1,56 @@
+import os
+import random
+
+def generate_random_color():
+    """Tạo màu sáng ngẫu nhiên."""
+    return (random.randint(128, 255), random.randint(128, 255), random.randint(128, 255))
+
+def create_gradient(start_color, end_color, steps):
+    """Tạo gradient màu giữa hai màu."""
+    gradient = []
+    for step in range(steps):
+        r = int(start_color[0] + (end_color[0] - start_color[0]) * (step / (steps - 1)))
+        g = int(start_color[1] + (end_color[1] - start_color[1]) * (step / (steps - 1)))
+        b = int(start_color[2] + (end_color[2] - start_color[2]) * (step / (steps - 1)))
+        gradient.append((r, g, b))
+    return gradient
+
+def print_gradient_banner():
+    """In banner với gradient màu."""
+    banner = [
+        "╔═══════════════════════════════════════════════╗",
+"███╗░░░███╗██╗███╗░░██╗██╗░░██╗  ██╗░░░░░░█████╗░██╗",
+"████╗░████║██║████╗░██║██║░░██║  ██║░░░░░██╔══██╗██║",
+"██╔████╔██║██║██╔██╗██║███████║  ██║░░░░░██║░░██║██║",
+"██║╚██╔╝██║██║██║╚████║██╔══██║  ██║░░░░░██║░░██║██║",
+"██║░╚═╝░██║██║██║░╚███║██║░░██║  ███████╗╚█████╔╝██║",
+"╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝  ╚══════╝░╚════╝░╚═╝",
+        "╠═══════════════════════════════════════════════╣",
+        "║▶ Nhóm Zalo  : https://zalo.me/g/cebxmw597             ║",
+        "║▶ FaceBook : https://www.facebook.com/minhhloiikhibenanhemthay      ║",
+        "║▶ Zalo : La Minh Lợi                             ║",
+        "║▶ Mua Key Vip Cứ Liên Hệ Zalo Nhé              ║",
+        "║▶ Nếu Có Lỗi Vui Lòng Báo Cho Facebook Nhé     ║",
+        "╚═══════════════════════════════════════════════╝",
+    ]
+
+    # Xóa màn hình
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+    # Tạo 3 màu ngẫu nhiên
+    color1 = generate_random_color()
+    color2 = generate_random_color()
+    color3 = generate_random_color()
+
+    # Tạo gradient với 3 màu
+    gradient_colors = []
+    gradient_colors.extend(create_gradient(color1, color2, len(banner) // 2))
+    gradient_colors.extend(create_gradient(color2, color3, len(banner) - len(gradient_colors)))
+
+    for i, line in enumerate(banner):
+        r, g, b = gradient_colors[i]
+        # Đặt màu cho dòng banner
+        print(f"\033[38;2;{r};{g};{b}m{line}\033[0m")
+
+# Gọi hàm để in banner với gradient màu
+print_gradient_banner()
