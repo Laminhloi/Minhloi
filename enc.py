@@ -611,24 +611,25 @@ light = Col.light_gray
 purple = Colors.StaticMIX((Col.green, Col.yellow))
 bpurple = Colors.StaticMIX((Col.pink, Col.blue, Col.blue))
 
-text = f"""
- mã hóa OBFUSCATOR AST MẠNH MẼ CHUỖI SỬ DỤNG BIỂU THỨC LAMBDA INT VÀ BOOL SỬ DỤNG BIỂU THỨC TENARY THỬ CATCH, MATCH CASE [THÊM RÁC VAR VÀ HÀM KHÔNG XÁC ĐỊNH]
+text = f"""Code By Minh Lợi 
+
+ Mã Hóa OBFUSCATOR AST MẠNH MẼ CHUỖI SỬ DỤNG BIỂU THỨC LAMBDA INT VÀ BOOL SỬ DỤNG BIỂU THỨC TENARY THỬ CATCH, MATCH CASE [THÊM RÁC VAR VÀ HÀM KHÔNG XÁC ĐỊNH]
 
  B1:Nhập tên file
  B2:Nhập Tên Mã Hóa(BASE64,...)
  B3: HIGH (KHÔNG KHUYẾN NGHỊ) (ĐÂY LÀ CHẾ ĐỘ TRUNG BÌNH NHƯNG X2 SPAM) 
- 
  CHỐNG HOOKING: BLOCK HOOKING TRÌNH BIÊN DỊCH: VỚI MARSHAL(TRÌNH PHÂN GIẢI CHỐNG PYC), ZLIB, BZ2, BASE64
 """
 
 banner = f"""
 
-███╗░░░███╗██╗███╗░░██╗██╗░░██╗  ██╗░░░░░░█████╗░██╗
-████╗░████║██║████╗░██║██║░░██║  ██║░░░░░██╔══██╗██║
-██╔████╔██║██║██╔██╗██║███████║  ██║░░░░░██║░░██║██║
-██║╚██╔╝██║██║██║╚████║██╔══██║  ██║░░░░░██║░░██║██║
-██║░╚═╝░██║██║██║░╚███║██║░░██║  ███████╗╚█████╔╝██║
-╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝░░╚═╝  ╚══════╝░╚════╝░╚═╝
+
+
+
+
+
+
+
 """
 
 
