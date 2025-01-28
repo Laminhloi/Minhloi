@@ -3,28 +3,28 @@ import base64
 def encode_shell_script(input_file, output_file):
     try:
         # Đọc nội dung từ file .sh gốc
-        with open(input_file, 'r') as file:
+        with open(input_file, 'r', encoding='utf-8') as file:
             script_content = file.read()
         
         # Mã hóa nội dung
-        encoded_content = base64.b64encode(script_content.encode('utf-8'))
+        encoded_content = base64.b64encode(script_content.encode('utf-8')).decode('utf-8')
         
         # Tạo file mới chứa mã hóa và mã giải mã
-        with open(output_file, 'w') as encoded_file:
+        with open(output_file, 'w', encoding='utf-8') as encoded_file:
             encoded_file.write(f"""#!/bin/bash
 # Script này tự giải mã và thực thi
 
-encoded_script="{encoded_content.decode('utf-8')}"
+encoded_script="{encoded_content}"
 
 # Giải mã nội dung
-decoded_script=$(echo "$encoded_script" | base64 -d)
+decoded_script=$(echo "$encoded_script" | base64 --decode | tr -d '\\r')
 
-# Thực thi nội dung đã giải mã
-bash_code=$(mktemp)
-echo "$decoded_script" > $bash_code
-chmod +x $bash_code
-bash $bash_code
-rm -f $bash_code
+# Lưu nội dung vào file tạm và thực thi
+bash_code=$(mktemp /tmp/script.XXXXXX)
+echo "$decoded_script" > "$bash_code"
+chmod +x "$bash_code"
+bash "$bash_code"
+rm -f "$bash_code"
 """)
         
         print(f"File mã hóa đã được tạo: {output_file}")
