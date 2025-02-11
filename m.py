@@ -160,7 +160,7 @@ if yn.lower() == 'y':
             #for ndss in data_list:
               data = f"fb_dtsg={fb_dtsg}&jazoest={jazoest}&body={nds.decode('utf-8')}&send=Send&tids=cid.g.{idcanspam}&wwwupp=C3&platform_xmd=&referrer=&ctype=&cver=legacy&csid=366a74a7-2d30-45dd-94c2-ad47d662dcfb"
               response = requests.post("https://mbasic.facebook.com/messages/send/", params=params, headers=headers, data=data.encode('utf-8'))
-              print(f"\033[1;33mID BOX\033[1;97m: {idcanspam} \033[1;31m|TrHoangDuy| \033[32;5;245mSpam Thành Công")
+              print(f"\033[1;33mID BOX\033[1;97m: {idcanspam} \033[1;31m|Laminhloi| \033[32;5;245mSpam Thành Công")
               idelay(delay)
         except Exception as e:
           print(f"{do}Lỗi bị ngắt kết lối vui lòng kết lối lại mạng để tiếp tục treo")
