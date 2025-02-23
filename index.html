@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="particles-config.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        .menu-container {
+            background-color: #2b2b2b;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #30cfd0;
+            width: 250px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            cursor: move;
+        }
+        .menu-title, .special-text {
+            text-align: center;
+            font-weight: bold;
+            background: linear-gradient(45deg, #ff0050, #ff9e00, #50ff00, #0050ff, #ff00a1);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: gradient 5s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .menu-item button {
+            background-color: #333;
+            border: none;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .menu-item button:hover, .menu-item button.active {
+            background-color: #ff0050;
+        }
+        .file-input {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="menu-container" id="menu">
+        <div class="menu-title"> 𝐃𝐞𝐯𝐞𝐥𝐨𝐩𝐞𝐫 "LA MINH LỢI  "</div>
+
+        <div class="menu-item"><span>Super Aimlock</span><button onclick="triggerFileInput('Super Aimlock')">Chạy</button><input type="file" class="file-input" id="file-Super Aimlock" onchange="handleFileSelect('Super Aimlock')"></div>
+        <div class="menu-item"><span>Super Sensi</span><button onclick="triggerFileInput('Super Sensi')">Chạy</button><input type="file" class="file-input" id="file-Super Sensi" onchange="handleFileSelect('Super Sensi')"></div>
+        <div class="menu-item"><span>Super Aimbot 50%</span><button onclick="triggerFileInput('Super Aimbot 50%')">Chạy</button><input type="file" class="file-input" id="file-Super Aimbot 50%" onchange="handleFileSelect('Super Aimbot 50%')"></div>
+        <div class="menu-item"><span>Super Jerous</span><button onclick="triggerFileInput('Super Jerous')">Chạy</button><input type="file" class="file-input" id="file-Super Jerous" onchange="handleFileSelect('Super Jerous')"></div>
+
+        <div class="special-text"> Sensitive Sensor </div>
+        <div class="menu-item"><span> Control | System </span><button onclick="triggerFileInput('Control | System')">Chạy</button><input type="file" class="file-input" id="file-Control | System" onchange="handleFileSelect('Control | System')"></div>
+        <div class="menu-item"><span> Tối Ưu Màn </span><button onclick="triggerFileInput('Tối Ưu Màn')">Chạy</button><input type="file" class="file-input" id="file-Tối Ưu Màn" onchange="handleFileSelect('Tối Ưu Màn')"></div>
+        <div class="menu-item"><span> Speep Optimizer </span><button onclick="triggerFileInput('Speep Optimizer')">Chạy</button><input type="file" class="file-input" id="file-Speep Optimizer" onchange="handleFileSelect('Speep Optimizer')"></div>
+        <div class="menu-item"><span> Antiband </span><button onclick="triggerFileInput('Antiband')">Chạy</button><input type="file" class="file-input" id="file-Antiband" onchange="handleFileSelect('Antiband')"></div>
+    </div>
+
+    
+    <audio id="vibrate-sound" src="data:audio/mp3;base64,SUQzBAAAAAAAI1RkZGQAAAAAAQABAAEAAAABAAEAAAAAA=="
+           preload="auto"></audio>
+
+    <script>
+        function toggleButton(button, item) {
+            button.classList.toggle('active');  
+            alert(item + " !");
+        }
+
+        function triggerFileInput(item) {
+            document.getElementById('file-' + item).click();
+        }
+
+        function handleFileSelect(item) {
+            
+            document.getElementById("vibrate-sound").play();
+
+            if (Notification.permission === "granted") {
+                new Notification(item + " - Đã Tác Dụng !");
+            } else if (Notification.permission !== "denied") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        new Notification(item + " - Đã tác Dụng !");
+                    }
+                });
+            }
+
+            alert(item + " - Đã tác Dụng !");
+        }
+
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 100 },
+                color: { value: "#000" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5 },
+                size: { value: 3 },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#fff",
+                    opacity: 0.6,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 3
+                }
+            }
+        });
+
+        const menu = document.getElementById("menu");
+        let isDragging = false, offsetX, offsetY;
+
+        menu.addEventListener("mousedown", function (event) {
+            isDragging = true;
+            offsetX = event.clientX - menu.getBoundingClientRect().left;
+            offsetY = event.clientY - menu.getBoundingClientRect().top;
+        });
+
+        document.addEventListener("mousemove", function (event) {
+            if (isDragging) {
+                menu.style.left = event.clientX - offsetX + 'px';
+                menu.style.top = event.clientY - offsetY + 'px';
+            }
+        });
+
+        document.addEventListener("mouseup", function () {
+            isDragging = false;
+        });
+    </script>
+</body>
+</html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1em;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.innerHTML = "❄";
+            snowflake.classList.add("snowflake");
+            document.body.appendChild(snowflake);
+
+            const size = Math.random() * 10 + 1;
+            snowflake.style.left = Math.random() * window.innerWidth + "px";
+            snowflake.style.fontSize = size + "px";
+            snowflake.style.animationDuration = (Math.random() * 4 + 3) + "s";
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>
